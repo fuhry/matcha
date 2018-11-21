@@ -1,0 +1,11 @@
+$variant: 'dark';
+$color: 'lava';
+$transparency: 'true';
+
+@import 'sass/colors';
+@import 'sass/drawing';
+@import 'sass/common';
+@import 'sass/apps';
+@import 'sass/granite';
+@import 'sass/transparent_widgets';
+@import 'sass/colors-public';

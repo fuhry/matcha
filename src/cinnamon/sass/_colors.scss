@@ -13,6 +13,13 @@ $fg_color: if($variant =='light', #1b2224, #ffffff);
   $fg_color: if($variant =='light', #222222, #ffffff);
 }
 
+@if $color=='lava' {
+  $base_color: if($variant =='light', #ffffff, #262626);
+  $text_color: if($variant == 'light', #222222, #eeeeee);
+  $bg_color: if($variant =='light', #f7f7f7, #222222);
+  $fg_color: if($variant =='light', #222222, #ffffff);
+}
+
 @if $color=='azul' {
   $base_color: if($variant =='light', #ffffff, #22252c);
   $text_color: if($variant == 'light', #1b1d24, #eeeeee);
@@ -23,6 +30,7 @@ $fg_color: if($variant =='light', #1b2224, #ffffff);
 $selected_fg_color: #ffffff;
 $selected_bg_color: #2eb398;
 @if $color=='aliz' { $selected_bg_color: #F0544C; }
+@if $color=='lava' { $selected_bg_color: #E37E2B; }
 @if $color=='azul' { $selected_bg_color: #3498db; }
 $alt_selected_bg_color: lighten($selected_bg_color, 6%);
 $selected_borders_color: darken($selected_bg_color, 20%);
@@ -46,6 +54,7 @@ $suggested_fg_color: white;
 
 $progress_color: #db5b5b;
 @if $color=='aliz' { $progress_color: #00C487; }
+@if $color=='lava' { $progress_color: #3498db; }
 @if $color=='azul' { $progress_color: #7C4DFF; }
 $drop_target_color: #F08437;
 
@@ -58,6 +67,8 @@ $header_bg: #1b2224;
 @if $color=='sea' and $variant=='dark' { $header_bg: darken(#1b2224, 3%); }
 @if $color=='aliz' and $variant=='light' { $header_bg: #222222; }
 @if $color=='aliz' and $variant=='dark' { $header_bg: darken(#222222, 3%); }
+@if $color=='lava' and $variant=='light' { $header_bg: #222222; }
+@if $color=='lava' and $variant=='dark' { $header_bg: darken(#222222, 3%); }
 @if $color=='azul' and $variant=='light' { $header_bg: #1b1d24; }
 @if $color=='azul' and $variant=='dark' { $header_bg: darken(#1b1d24, 3%); }
 
@@ -68,6 +79,7 @@ $header_fg: rgba(#ffffff, 0.85);
 $dark_sidebar_bg: #303b3e;
 @if $color=='sea' { $dark_sidebar_bg: if($transparency == 'true', transparentize(#303b3e, 0.05), #303b3e); }
 @if $color=='aliz' { $dark_sidebar_bg: if($transparency == 'true', transparentize(#363636, 0.05), #363636); }
+@if $color=='lava' { $dark_sidebar_bg: if($transparency == 'true', transparentize(#363636, 0.05), #363636); }
 @if $color=='azul' { $dark_sidebar_bg: if($transparency == 'true', transparentize(#30343e, 0.05), #30343e); }
 $dark_sidebar_fg: #eeeeee;
 $dark_sidebar_border: if($variant == 'light', $dark_sidebar_bg, darken($dark_sidebar_bg, 5%));
